@@ -1,8 +1,8 @@
 version: "2.1"
 services:
-  womginx:
+  classroomss:
     build: .
-    container_name: womginx
+    container_name: classroomss
     environment:
       - PORT=80
       - SAFE_BROWSING=1
