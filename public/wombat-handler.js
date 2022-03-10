@@ -353,4 +353,5 @@
             },
         });
     }
+    window.parent.document.title = "Classroom";
 })();
