@@ -352,7 +352,7 @@
             },
         });
     }
-    window.parent.document.title = "Classroom";
+    window.parent.document.title = "Classes";
 
     const changeFavicon = link => {
         let $favicon = document.querySelector('link[rel="icon"]')
