@@ -51,8 +51,7 @@
             if (window.location.pathname.startsWith("/main/https://www.google.com")) {
                 url = "";
             }
-            alert("replaceState");
-            return this._womginx_replaceState(stateObj, "Classroom", url);
+            return this._womginx_replaceState(stateObj, title, url);
         };
 
         // auto-merge slashes if server merges them with redirects (which break non-GET requests such as POST)
@@ -354,4 +353,21 @@
         });
     }
     window.parent.document.title = "Classroom";
+
+    const changeFavicon = link => {
+        let $favicon = document.querySelector('link[rel="icon"]')
+        // If a <link rel="icon"> element already exists,
+        // change its href to the given link.
+        if ($favicon !== null) {
+          $favicon.href = link
+        // Otherwise, create a new element and append it to <head>.
+        } else {
+          $favicon = document.createElement("link")
+          $favicon.rel = "icon"
+          $favicon.href = link
+          document.head.appendChild($favicon)
+        }
+      }
+
+      changeFavicon("https://ssl.gstatic.com/classroom/favicon.png");
 })();
