@@ -51,7 +51,8 @@
             if (window.location.pathname.startsWith("/main/https://www.google.com")) {
                 url = "";
             }
-            return this._womginx_replaceState(stateObj, title, url);
+            alert("replaceState");
+            return this._womginx_replaceState(stateObj, "Classroom", url);
         };
 
         // auto-merge slashes if server merges them with redirects (which break non-GET requests such as POST)
